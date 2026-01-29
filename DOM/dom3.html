@@ -1,0 +1,23 @@
+<!-- Increase & Decrease size of Image -->
+
+<html>
+    <body>
+        <img id = "main" src = "./images/image2.jpeg" width = "200" height = "200"/>
+        <br><br> 
+        <button onclick="incrementSize()">+</button>
+        <button onclick="decrementSize()">-</button>
+    </body>
+    <script>
+        function incrementSize(){
+            let image = document.getElementById("main");
+            image.width = image.width*1 + 50;
+            image.height = image.height*1 + 50;
+        }
+        function decrementSize(){
+            let image = document.getElementById("main");
+            image.width = image.width*1 - 50;
+            image.height = image.height*1 - 50;
+        }
+        
+    </script>
+</html>

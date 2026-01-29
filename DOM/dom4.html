@@ -1,0 +1,21 @@
+<!-- Swapping the images -->
+
+<html>
+    <body>
+        <img id = "main" src = "./images/images.jpeg" width = "200" height = "200"/><br><br><br>
+
+        <img onclick = "changeImage('first')" id = "first" src = "./images/image1.jpg" width = "100" height = "100"/>
+        <img onclick = "changeImage('second')" id = "second" src = "./images/image2.jpeg" width = "100" height = "100"/>
+        <img onclick = "changeImage('third')" id = "third" src = "./images/image3.jpg" width = "100" height = "100"/>
+        
+    </body>
+    <script>
+        function changeImage(currentImage){
+            let mainImage = document.getElementById("main");
+            let currentImageObj = document.getElementById(currentImage);
+            let temp = mainImage.src;
+            mainImage.src = currentImageObj.src;
+            currentImage.src = temp;
+        }
+    </script>
+</html>

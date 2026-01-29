@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <input type="text" class="number" placeholder="Enter the number"><br><br>
+    <input type="text" class="number" placeholder="Enter the number"><br><br>
+    <input type="text" class="number" placeholder="Enter the number"><br><br>
+
+    <span>Result : </span>
+    <span id="result">0</span>
+
+    <script>
+      let inputs = document.getElementsByClassName("number");
+      let result = document.getElementById("result");
+
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener("input", calculateSum);
+      }
+
+      function calculateSum() {
+        let sum = 0;
+
+        for (let i = 0; i < inputs.length; i++) {
+          sum += Number(inputs[i].value) || 0;
+        }
+
+        result.innerText = sum;
+      }
+    </script>
+  </body>
+</html>
